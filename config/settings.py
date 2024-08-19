@@ -31,7 +31,7 @@ INSTALLED_APPS = [
 
     # My App
     "public_panel",
-    # "admin_panel",
+    "admin_panel",
 ]
 
 MIDDLEWARE = [

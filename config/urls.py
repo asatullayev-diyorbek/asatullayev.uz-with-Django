@@ -5,6 +5,6 @@ from .settings import STATIC_ROOT, STATIC_URL
 
 
 urlpatterns = [
-    path("admin_panel/", admin.site.urls),
+    path("admin/", admin.site.urls),
     path('', include('public_panel.urls')),
 ] + static(STATIC_URL, document_root=STATIC_ROOT)

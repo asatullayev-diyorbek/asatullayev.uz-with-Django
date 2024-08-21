@@ -405,7 +405,7 @@ header .navbar ul li a:hover {
 
 .contact .row .content .info h3 a:hover, .contact .row .content .info h3:hover {
     text-decoration: none;
-    color: #0a0aff;
+    color: var(--yellow);
 }
 
 .contact .row .content .info h3 i {

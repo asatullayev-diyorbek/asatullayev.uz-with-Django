@@ -1,28 +1,54 @@
 <!doctype html>
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>
-        {% block title %}
-        	
-        {% endblock %}
-    </title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
-</head>
-<body>
-    {% block content %}
-    	
-    {% endblock %}
-    
-    {% include 'public_panel/components/home.html' %}
-    {% include 'public_panel/components/about.html' %}
-    {% include 'public_panel/components/education.html' %}
-    {% include 'public_panel/components/portfolio.html' %}
-    {% include 'public_panel/components/contact.html' %}
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>
+            {{ title }}
+        </title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <header>
+            <div class="user">
+                <img src="" alt="">
+                <h3 class="name">I'm Asatullayev</h3>
+                <p class="post">Backend developer</p>
+            </div>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home" class="active">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#education">education</a></li>
+                    <li><a href="#portfolio">portfolio</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="menu" class="fas fa-bars"></div>
+
+        {% include 'public_panel/components/home.html' %}
+        {% include 'public_panel/components/about.html' %}
+        {% include 'public_panel/components/education.html' %}
+        {% include 'public_panel/components/portfolio.html' %}
+        {% include 'public_panel/components/contact.html' %}
+
+
+        <a href="#home" class="top">
+            <img width="64" height="64"
+                 src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/external-rocket-achievements-flaticons-flat-flat-icons-2.png"
+                 alt="external-rocket-achievements-flaticons-flat-flat-icons-2" />
+        </a>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <script src="{% static 'js/script.js' %}"></script>
+
+
+    </body>
 </html>
